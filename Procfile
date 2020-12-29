@@ -1,1 +1,1 @@
-web: gunicorn strategygameserver.wsgi
+web: gunicorn game_server.wsgi
