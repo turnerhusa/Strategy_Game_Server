@@ -1,1 +1,0 @@
-web: gunicorn --chdir game_server game_server.wsgi:application
