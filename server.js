@@ -26,6 +26,8 @@ const STR_INVALID_CMD = "Invalid command";
 const STR_TOO_MANY_PEERS = "Too many peers connected";
 const STR_INVALID_TRANSFER_MODE = "Invalid transfer mode, must be text";
 
+console.log("Hello world");
+
 function randomInt (low, high) {
 	return Math.floor(Math.random() * (high - low + 1) + low);
 }
@@ -203,6 +205,7 @@ function parseMsg (peer, msg) {
 }
 
 wss.on("connection", (ws) => {
+	console.log("Attempt for connection");
 	if (peersCount >= MAX_PEERS) {
 		ws.close(4000, STR_TOO_MANY_PEERS);
 		return;
